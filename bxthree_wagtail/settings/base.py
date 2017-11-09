@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 from __future__ import absolute_import, unicode_literals
 import os
+import raven
 
 AWS_STORAGE_BUCKET_NAME = 'bxthree-wagtail'
 AWS_ACCESS_KEY_ID = 'AKIAJXXBHMEH6YPMHKPQ'
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'storages',
+    'raven.contrib.django.raven_compat'
 ]
 
 MIDDLEWARE = [

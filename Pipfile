@@ -18,6 +18,7 @@ django-toolbelt = "*"
 whitenoise = "*"
 django-storages = "*"
 "boto3" = "*"
+raven = "*"
 
 
 [requires]
