@@ -16,6 +16,8 @@ wagtail = "*"
 "psycopg2" = "*"
 django-toolbelt = "*"
 whitenoise = "*"
+django-storages = "*"
+"boto3" = "*"
 
 
 [requires]

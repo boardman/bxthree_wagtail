@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 from __future__ import absolute_import, unicode_literals
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+AWS_STORAGE_BUCKET_NAME = 'bxthree-wagtail'
+AWS_ACCESS_KEY_ID = 'AKIAJXXBHMEH6YPMHKPQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -50,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -142,8 +149,10 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "bxthree_wagtail"
+WAGTAIL_SITE_NAME = "BxThree"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://bxthree.com'
+
+
