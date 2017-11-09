@@ -1,0 +1,1 @@
+web: gunicorn bxthree_wagtail.wsgi --log-file -
