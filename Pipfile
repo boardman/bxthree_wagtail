@@ -7,14 +7,15 @@ name = "pypi"
 
 [dev-packages]
 
+pylint = "*"
 
 
 [packages]
 
 wagtail = "*"
 "psycopg2" = "*"
-pylint = "*"
 django-toolbelt = "*"
+whitenoise = "*"
 
 
 [requires]
