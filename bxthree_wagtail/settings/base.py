@@ -14,11 +14,13 @@ from __future__ import absolute_import, unicode_literals
 import os
 import raven
 
-AWS_STORAGE_BUCKET_NAME = 'bxthree-wagtail'
-AWS_ACCESS_KEY_ID = 'AKIAJXXBHMEH6YPMHKPQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
+env = os.environ.copy()
+
+AWS_STORAGE_BUCKET_NAME = env['AWS_STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY_ID = env['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = env['AWS_SECRET_ACCESS_KEY']
+AWS_S3_CUSTOM_DOMAIN = env['AWS_S3_CUSTOM_DOMAIN']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
